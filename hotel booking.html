@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Noble Heaven</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      margin: 0;
+      background: url('bg.jfif') no-repeat center fixed;
+      background-size: cover;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.45);
+      min-height: 100vh;
+    }
+    .navbar {
+      background: rgba(0,0,0,0.7);
+      padding: 15px;
+      text-align: center;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      color: gold;
+    }
+    .header {
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+    }
+    .header h1 {
+      font-size: 36px;
+    }
+    .room-card {
+      display: flex;
+      background: rgba(255,255,255,0.9);
+      width: 80%;
+      margin: 30px auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .room-card:hover {
+      transform: scale(1.03);
+      transition: 0.3s;
+    }
+    .room-img {
+      width: 300px;
+    }
+    .room-info {
+      padding: 20px;
+    }
+    .room-title {
+      color: crimson;
+      font-size: 26px;
+    }
+    .price {
+      background: gold;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 10px 0;
+    }
+    .book-btn {
+      padding: 8px 15px;
+      background: crimson;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .book-btn:hover {
+      background: black;
+    }
+    select {
+      padding: 6px;
+      border-radius: 6px;
+    }
+    .features {
+      text-align: center;
+      color: white;
+      padding: 40px;
+    }
+    .feature-box {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 15px 25px;
+      margin: 10px;
+      border-radius: 20px;
+    }
+    .reviews {
+      text-align: center;
+      color: white;
+      padding: 40px;
+    }
+    .review-box {
+      background: rgba(255,255,255,0.2);
+      padding: 20px;
+      margin: 15px auto;
+      width: 60%;
+      border-radius: 15px;
+    }
+    .footer {
+      background: rgba(0,0,0,0.8);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="overlay">
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Rooms</a>
+    <a href="#">Facilities</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="header">
+    <h1>WELCOME TO HOTEL NOBLE HEAVEN</h1>
+    <p>Experience Luxury and Comfort</p>
+  </div>
+
+  <div class="room-card">
+    <img src="vip room.jfif" class="room-img">
+    <div class="room-info">
+      <h2 class="room-title">Deluxe Room</h2>
+      <p>With AC / Without AC</p>
+      <span class="price">₹5,999 / night</span><br><br>
+      <button class="book-btn">Book Now</button>
+      <label>Choose slot:</label>
+      <select>
+        <option>9:00 - 2:00</option>
+        <option>2:00 - 5:00</option>
+        <option>5:00 - 9:00</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="room-card">
+    <img src="couple room.jfif" class="room-img">
+    <div class="room-info">
+      <h2 class="room-title">Couple Room</h2>
+      <p>With AC / Without AC</p>
+      <span class="price">₹4,499 / night</span><br><br>
+      <button class="book-btn">Book Now</button>
+      <label>Choose slot:</label>
+      <select>
+        <option>9:00 - 2:00</option>
+        <option>2:00 - 5:00</option>
+        <option>5:00 - 9:00</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="room-card">
+    <img src="family room.jfif" class="room-img">
+    <div class="room-info">
+      <h2 class="room-title">Family Room</h2>
+      <p>With AC / Without AC</p>
+      <span class="price">₹6,999 / night</span><br><br>
+      <button class="book-btn">Book Now</button>
+      <label>Choose slot:</label>
+      <select>
+        <option>9:00 - 2:00</option>
+        <option>2:00 - 5:00</option>
+        <option>5:00 - 9:00</option>
+      </select>
+    </div>
+  </div>
+
+ 
+  <div class="features">
+    <h2>Why Choose Our Hotel?</h2>
+    <div class="feature-box">🌅 Rooftop View</div>
+    <div class="feature-box">🍽 Free Breakfast</div>
+    <div class="feature-box">📶 Free WiFi</div>
+    <div class="feature-box">🚗 Free Parking</div>
+  </div>
+
+  <div class="reviews">
+    <h2>Guest Reviews</h2>
+
+    <div class="review-box">
+      ⭐⭐⭐⭐⭐  
+      <p>"Amazing stay, very clean rooms!"</p>
+      <p><b>- Rahul</b></p>
+    </div>
+
+    <div class="review-box">
+      ⭐⭐⭐⭐☆  
+      <p>"Great service and friendly staff."</p>
+      <p><b>- Anjali</b></P>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>📍 Hyderabad, India</p>
+    <p>📞 98765 43210 | ✉ nobleheaven@gmail.com</p>
+    <p> 2025 Hotel Noble Heaven</p>
+  </div>
+
+</div>
+</body>
+</html>
