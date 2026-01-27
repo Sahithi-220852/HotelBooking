@@ -4,133 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotel Noble Heaven</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      margin: 0;
-      background: url('bg.jfif') no-repeat center fixed;
-      background-size: cover;
-    }
-    .overlay {
-      background: rgba(0, 0, 0,0.45);
-      min-height: 100vh;
-    }
-    .navbar {
-      background: rgba(0,0,0,0.7);
-      padding: 15px;
-      text-align: center;
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .navbar a:hover {
-      color: gold;
-    }
-    .header {
-      text-align: center;
-      color: white;
-      padding: 40px 20px;
-    }
-    .header h1 {
-      font-size: 36px;
-    }
-    .room-card {
-      display: flex;
-      background: rgba(255,255,255,0.9);
-      width: 80%;
-      margin: 30px auto;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-    .room-card:hover {
-      transform: scale(1.03);
-      transition: 0.3s;
-    }
-    .room-img {
-      width: 300px;
-    }
-    .room-info {
-      padding: 20px;
-    }
-    .room-title {
-      color: crimson;
-      font-size: 26px;
-    }
-    .price {
-      background: gold;
-      padding: 5px 10px;
-      border-radius: 8px;
-      font-weight: bold;
-      display: inline-block;
-      margin: 10px 0;
-    }
-    .book-btn {
-      padding: 8px 15px;
-      background: crimson;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-    .book-btn:hover {
-      background: black;
-    }
-    select {
-      padding: 6px;
-      border-radius: 6px;
-    }
-    .features {
-      text-align: center;
-      color: white;
-      padding: 40px;
-    }
-    .feature-box {
-      display: inline-block;
-      background: rgba(255,255,255,0.2);
-      padding: 15px 25px;
-      margin: 10px;
-      border-radius: 20px;
-    }
-    .reviews {
-      text-align: center;
-      color: rgb(85, 13, 202);
-      padding: 40px;
-    }
-    .review-box {
-      background: rgba(255,255,255);
-      padding: 20px;
-      margin: 15px auto;
-      width: 60%;
-      border-radius: 15px;
-    }
-    .footer {
-      background: rgba(0,0,0);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .external-link{
-      display:inline-block;
-      padding:10px 18px;
-      background-color:rgb(255, 0, 234);
-      color:white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size:15px;
-    }
-    .external-link:hover{
-      background-color: aqua;
-    }
-  </style>
+ <link rel="stylesheet" href="style.css"> 
 </head>
 
 <body>
@@ -141,24 +15,31 @@
     <a href="#">Facilities</a>
     <a href="#">Contact</a>
   </div>
-
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closepopup()">&times;</span>
+      <h2>booking successfull</h2>
+      <p><b>remaining rooms:</b><span id="popuprooms"></span></p>
+    </div>
+  </div> 
   <div class="header">
     <h1>WELCOME TO HOTEL NOBLE HEAVEN</h1>
     <p>Experience Luxury and Comfort</p>
   </div>
-
+   <section id="hotel-details">
+        <h2>HOTEL BOOKING DETAILS</h2>
+        <p><b>HOTEL NAME:</b><span id="hotelname"></span></p>
+        <p><b>ROOM COST:</b><span id="roomprice"></span></p>
+        <p><b>AVILABLE ROOMS:</b><span id="availablerooms"></span></p>
+        <p><b>BOOKING STATUS:</b><span id="bookingStatus"></span></p>
+        <button onclick="bookroom()" style="color: rgb(38, 0, 255);">bookroom</button>
+   </section>
+  </div>  
   <div class="room-card">
-<<<<<<< HEAD
-  <img src="vip room.jfif" class="room-img">
-  <video controls>
-  <source src ="https://youtube.com/shorts/ykfcnbzgkY0?si=XouBxtzM3f1g6QD2">
-  </video> 
-=======
     <img src="vip room.jfif" class="room-img">
     <video controls>
      <source src="https://youtube.com/shorts/ykfcnbzgkY0?si=NzJn5niz0VxzD7rp">
 </video>
->>>>>>> 225e18cc4aa33ae45e0c89f57111bbd34d8c8d3e
     <div class="room-info">
       <h2 class="room-title">Deluxe Room</h2>
       <p>With AC / Without AC</p>
@@ -214,7 +95,9 @@
     </div>
   </div>
 
- 
+  <div class="center-btn">
+  <a href="booking form.html" target="_blank" class="external-link">Book now</a>
+  </div>
   <div class="features">
     <h2>Why Choose Our Hotel?</h2>
     <div class="feature-box">🌅 Rooftop View</div>
@@ -225,7 +108,6 @@
 
   <div class="reviews">
     <h2>Guest Reviews</h2>
-
     <div class="review-box">
       ⭐⭐⭐⭐⭐  
       <p>"Amazing stay, very clean rooms!"</p>
@@ -237,8 +119,27 @@
       <p>"Great service and friendly staff."</p>
       <p><b>-anuskha</b></P>
     </div>
-  </div>
-
+  </div> 
+  
+  <table id="t1" border=1 align="center">
+  <caption>FILL YOUR DETAILS</caption>  
+            <tr>
+                <th>name</th>
+                <th>AGE</th>
+                <th>DAYS </th>
+            </tr>
+            <tr>
+                <td>amala</td>
+                 <td>30</td>
+                  <td>3</td>
+            </tr>
+            <tr>
+                <td>anuskha</td>
+                 <td>20</td>
+                  <td>2</td>
+            </tr>
+        </table>  
+     <script src="script.js"></script>      
   <div class="footer">
     <p>📍 Hyderabad, India</p>
     <p>📞 98765 43210 | ✉ nobleheaven@gmail.com</p>
